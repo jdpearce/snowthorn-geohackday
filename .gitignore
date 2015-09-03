@@ -1,4 +1,5 @@
 node_modules
-_build
+bower_components
+_dist
 .grunt
 .DS_Store

@@ -1,0 +1,23 @@
+{
+  "name": "snowthorn-geohackday",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jdpearce/snowthorn-geohackday",
+  "main": "src/index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "jo.pearce@snowthorn.co.uk"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

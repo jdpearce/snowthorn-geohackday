@@ -5,7 +5,7 @@ module.exports = function(grunt) {
             options: {
                 port : 58883,
                 protocol: 'http',
-                base: '_build'
+                base: '<%= dist %>'
             }
         }
     });

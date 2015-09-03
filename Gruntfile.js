@@ -1,19 +1,16 @@
-module.exports = function(grunt) {
-	grunt.initConfig({
-		pkg : require('./package.json')
-	});
-	
-	grunt.loadTasks('tasks');
-	
-	grunt.registerTask(
-  		'rebuild', 
-  		'Compiles all of the assets and copies the files to the build directory.', 
-  		[ 'clean:build', 'copy']
-	);
-	
-	grunt.registerTask(
-  		'default', 
-  		'Rebuilds, runs connect and then sits watching the src folder.', 
-  		[ 'rebuild', 'connect', 'watch']
-	);
+module.exports = function (grunt) {
+
+  // Configuration
+  grunt.initConfig({
+    pkg: require('./package.json'),
+    app: 'src',
+    dist: '_dist',
+    bower: grunt.file.readJSON('./.bowerrc')
+  });
+
+  grunt.loadTasks('tasks');
+
+  grunt.registerTask('rebuild', ['clean', 'copy', 'uglify']);
+
+  grunt.registerTask('default', ['rebuild', 'connect', 'watch']);
 };
