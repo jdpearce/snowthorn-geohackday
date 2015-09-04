@@ -5,23 +5,13 @@ module.exports = function(grunt) {
       files: [{
           expand: true,
           cwd: '<%= bower.directory %>/bootstrap/dist',
-          src: ['css/boostrap.min.css', 'css/bootstrap-theme.min.css'],
+          src: ['css/bootstrap.min.css', 'css/bootstrap-theme.min.css'],
           dest: '<%= dist %>'
         }, {
           expand: true,
           cwd: '<%= bower.directory %>/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= dist %>'
-        }, {
-          expand: true,
-          cwd: '<%= bower.directory %>/bootstrap/dist',
-          src: 'js/bootstrap.min.js',
-          dest: '<%= dist %>'
-        }, {
-          expand: true,
-          cwd: '<%= bower.directory %>/jquery/dist',
-          src: 'jquery.min.js',
-          dest: '<%= dist %>/js'
         }, {
           expand: true,
           cwd: '<%= app %>',

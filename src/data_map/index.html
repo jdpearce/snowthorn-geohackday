@@ -25,7 +25,7 @@
   <script src="http://js.arcgis.com/3.14compact/"></script>
   <script>
     var map,
-        webmapId = "1a40fa5cc1ab4569b79f45444d728067";
+        webmapId = "44b6f055a2d14c098beca71ca5bfbf40";//"1a40fa5cc1ab4569b79f45444d728067";
     
     require([
       "esri/map",
@@ -33,6 +33,7 @@
       "esri/dijit/Legend",
       "dojo/domReady!"
       ], function (Map, arcgisUtils, Legend) {
+        arcgisUtils.arcgisUrl = "http://snowthorn.maps.arcgis.com/sharing/content/items";
         arcgisUtils.createMap(webmapId, "mapDiv").then(function (response) {
         map = response.map;
 
